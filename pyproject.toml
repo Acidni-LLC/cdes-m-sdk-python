@@ -1,0 +1,48 @@
+﻿[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdes-m"
+version = "1.0.0"
+description = "Cannabis Data Exchange Standard - Medical (CDES-M) Python SDK"
+readme = "README.md"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Acidni LLC", email = "cdes-m@acidni.net"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+keywords = ["cannabis", "medical", "healthcare", "fhir", "hipaa", "cdes"]
+requires-python = ">=3.10"
+dependencies = [
+    "cdes>=1.0.0",
+    "pydantic>=2.0.0",
+    "fhir.resources>=7.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://cdes-m.terprint.com"
+"Documentation" = "https://cdes-m.terprint.com/docs"
+"Repository" = "https://github.com/Acidni-LLC/cdes-m-sdk-python"
+"Bug Tracker" = "https://github.com/Acidni-LLC/cdes-m-sdk-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cdes_m*"]
