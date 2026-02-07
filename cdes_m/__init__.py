@@ -1,4 +1,4 @@
-﻿"""CDES-M Python SDK
+"""CDES-M Python SDK
 
 Cannabis Data Exchange Standard - Medical Extension
 Bridge specification connecting CDES cannabis data to healthcare standards.
@@ -27,7 +27,7 @@ Website: https://cdes.acidni.net/cdes-m
 GitHub: https://github.com/Acidni-LLC/cdes-m-sdk-python
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "Acidni LLC"
 __email__ = "cdes@acidni.net"
 

@@ -1,47 +1,55 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "cdes-m"
-version = "1.0.0"
-description = "Cannabis Data Exchange Standard - Medical (CDES-M) Python SDK"
+version = "1.0.1"
+description = "Cannabis Data Exchange Standard - Medical (CDES-M) Python SDK for healthcare interoperability"
 readme = "README.md"
-license = {text = "Proprietary"}
+license = {text = "Apache-2.0"}
 authors = [
-    {name = "Acidni LLC", email = "cdes-m@acidni.net"}
+    {name = "Acidni LLC", email = "cdes@acidni.net"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Healthcare Industry",
-    "License :: Other/Proprietary License",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-keywords = ["cannabis", "medical", "healthcare", "fhir", "hipaa", "cdes"]
+keywords = ["cannabis", "medical", "healthcare", "fhir", "cdes", "terpenes", "cannabinoids", "interoperability"]
 requires-python = ">=3.10"
 dependencies = [
     "cdes>=1.0.0",
-    "pydantic>=2.0.0",
-    "fhir.resources>=7.0.0",
+    "pydantic[email]>=2.0.0",
 ]
 
 [project.optional-dependencies]
+fhir = [
+    "fhir.resources>=7.0.0",
+]
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
     "black>=23.0.0",
     "mypy>=1.0.0",
 ]
+all = [
+    "fhir.resources>=7.0.0",
+]
 
 [project.urls]
-"Homepage" = "https://cdes-m.terprint.com"
-"Documentation" = "https://cdes-m.terprint.com/docs"
+"Homepage" = "https://cdes.world"
+"Documentation" = "https://cdes.world/cdes-m"
 "Repository" = "https://github.com/Acidni-LLC/cdes-m-sdk-python"
 "Bug Tracker" = "https://github.com/Acidni-LLC/cdes-m-sdk-python/issues"
+"Specification" = "https://github.com/Acidni-LLC/cdes-m-spec"
 
 [tool.setuptools.packages.find]
 where = ["."]
